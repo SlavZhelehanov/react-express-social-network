@@ -32,7 +32,8 @@ export function UserProvider({ children }) {
 
     function changeGlobals(checkbox) {
         if (checkbox) {
-            const accessToken = localStorage.setItem("accessToken", JSON.stringify({ da: "kolkoto da ne e prazen" }));
+            const accessToken = JSON.stringify({ da: "kolkoto da ne e prazen" });
+            localStorage.setItem("accessToken", accessToken);
 
             setUser(authUser);
             setToken(accessToken);
