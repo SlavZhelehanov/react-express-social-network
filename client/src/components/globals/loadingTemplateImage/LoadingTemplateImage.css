@@ -1,0 +1,12 @@
+.fallback-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.shimmer-img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+}

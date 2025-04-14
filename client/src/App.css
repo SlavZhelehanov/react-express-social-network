@@ -1,0 +1,44 @@
+@media screen and (min-width: 600px) {
+    .sticky-column {
+        position: sticky;
+        top: 80px;
+    }
+}
+
+.w3-logo-size {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.w3-names-size {
+    color: rgb(87, 87, 87);
+    font-weight: bold;
+}
+
+.w3-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between left, center, and right sections */
+}
+
+.w3-navbar-center {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Take up remaining space between left and right sections */
+}
+
+.w3-logo-size {
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+.w3-bar-item img {
+    vertical-align: middle;
+}
+
+.w3-a-link {
+    text-decoration: none;
+}
+
+.w3-a-link:hover {
+    color: rgb(121, 76, 34);
+}
