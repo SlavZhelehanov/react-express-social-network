@@ -79,18 +79,27 @@ export default function Navbar() {
                     </>}
                 </div>
 
-                <NavLink
-                    to="#"
-                    className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
-                    title="My Account"
-                >
-                    <img
-                        src={authUser.avatar}
-                        className="w3-circle"
-                        style={{ height: 23, width: 23 }}
-                        alt="Avatar"
-                    />
-                </NavLink>
+                {user
+                    ? <NavLink
+                        to={`/auth/${user?._id}/profile`}
+                        className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+                        title="My Account"
+                    >
+                        <img
+                            src={authUser.avatar}
+                            className="w3-circle avatar-img"
+                            style={{ height: 23, width: 23 }}
+                            alt="Avatar"
+                        />
+                    </NavLink>
+                    : <NavLink
+                        to="/auth/login"
+                        className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+                        title="Login"
+                    >
+                        <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                    </NavLink>
+                }
             </nav>
         </header>
     );

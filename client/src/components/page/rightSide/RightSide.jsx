@@ -1,12 +1,15 @@
+import { useUserContext } from "../../../contexts/UserContext";
 import Ad from "../../globals/ad/Ad";
 
 export default function RightSide() {
+    const {user} = useUserContext();
+    
     return (
         <div className="w3-col m2 sticky-column">
             <div className="w3-card w3-round w3-white w3-center">
                 <div className="w3-container">
                     <p>Upcoming Events:</p>
-                    <img src="/w3images/forest.jpg" alt="Forest" style={{ width: "100%" }} />
+                    <img src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Forest" style={{ width: "100%" }} />
                     <p>
                         <strong>Holiday</strong>
                     </p>
@@ -20,7 +23,7 @@ export default function RightSide() {
             <div className="w3-card w3-round w3-white w3-center">
                 <div className="w3-container">
                     <p>Friend Request</p>
-                    <img src="/w3images/avatar6.png" alt="Avatar" style={{ width: "50%" }} />
+                    <img src="https://robohash.org/JaneDoe" alt="Avatar" style={{ width: "50%" }} />
                     <br />
                     <span>Jane Doe</span>
                     <div className="w3-row w3-opacity">
