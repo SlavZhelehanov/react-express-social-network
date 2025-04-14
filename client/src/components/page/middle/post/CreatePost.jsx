@@ -1,6 +1,6 @@
 import data from '@emoji-mart/data';
 import { useState } from 'react';
-import EmojiPicker from '../../../globals/loadingTemplateImage/emojiPicker/EmojiPicker';
+import EmojiPicker from '../../../globals/emojiPicker/EmojiPicker';
 
 export default function CreatePost() {
     const [emojiPicker, setEmojiPicker] = useState(false);
