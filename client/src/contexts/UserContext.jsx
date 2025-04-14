@@ -1,26 +1,54 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { authUser } from '../../userDb';
 
-// Create the UserContext
 const UserContext = createContext();
 
 export function useUserContext() {
     return useContext(UserContext);
 }
 
-// Create a provider component
 export function UserProvider({ children }) {
-    const [user, setUser] = useState(null); // Default user state is null (not logged in)
+    const [token, setToken] = useState(() => {
+        const storedToken = localStorage.getItem("accessToken");
+        return storedToken ? JSON.parse(storedToken) : null;
+    });
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        if (token) {
+            localStorage.setItem('accessToken', JSON.stringify(token));
+        } else {
+            localStorage.removeItem('accessToken');
+        }
+    }, [token]);
 
     function login(userData) {
-        setUser(userData); // Set user data when logging in
+        setUser(userData);
     };
 
     function logout() {
-        setUser(null); // Clear user data when logging out
+        setUser(null);
     };
 
+    function changeGlobals(checkbox) {
+        if (checkbox) {
+            const accessToken = localStorage.setItem("accessToken", JSON.stringify({ da: "kolkoto da ne e prazen" }));
+
+            setUser(authUser);
+            setToken(accessToken);
+        } else if (localStorage.getItem("accessToken")) {
+            localStorage.removeItem('accessToken');
+
+            setUser(null);
+            setToken(null);
+        } else {
+            setUser(null);
+            setToken(null);
+        }
+    }
+
     return (
-        <UserContext.Provider value={{ user, login, logout }}>
+        <UserContext.Provider value={{ user, login, logout, changeGlobals }}>
             {children}
         </UserContext.Provider>
     );
