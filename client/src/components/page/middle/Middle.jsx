@@ -1,15 +1,16 @@
+import { useUserContext } from "../../../contexts/UserContext";
 import CreatePost from "./post/CreatePost";
 import Post from "./post/Post";
 
 export default function Middle({ posts }) {
-    const isAuthenticated = false;
+    const { user } = useUserContext();
 
     return (
         <div className="w3-col m7">
             <div className="w3-row-padding">
                 <div className="w3-col m12">
                     <div className="w3-card w3-round w3-white">
-                        {isAuthenticated
+                        {user
                             ? <CreatePost />
                             : <div className="w3-round-large w3-white w3-container w3-padding w3-center">
                                 <h4 className="w3-opacity w3-margin-bottom">

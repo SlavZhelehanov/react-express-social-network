@@ -33,8 +33,8 @@ export default function Navbar() {
                     <span className="slider round"></span>
                 </label>
 
-                {user &&
-                    <div className="w3-navbar-center">
+                <div className="w3-navbar-center">
+                    {user && <>
                         <NavLink
                             to="#"
                             className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
@@ -76,8 +76,9 @@ export default function Navbar() {
                                 </NavLink>
                             </div>
                         </div>
-                    </div>
-                }
+                    </>}
+                </div>
+
                 <NavLink
                     to="#"
                     className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
