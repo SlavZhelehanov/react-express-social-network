@@ -1,6 +1,6 @@
 export default function Interests() {
     return (
-        <div className="w3-card w3-round w3-white w3-hide-small">
+        <div className="w3-card w3-round w3-white">
             <div className="w3-container">
                 <p>Interests</p>
                 <p>

@@ -23,6 +23,7 @@ export default function LeftSide() {
                 : <>
                     <br />
                     <Ad />
+                    <br />
                 </>
             }
         </div>
