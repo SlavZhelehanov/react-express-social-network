@@ -9,10 +9,10 @@ export default function AuthProfile() {
     const { id } = useParams();
 
     return (
-        <main className="w3-container w3-content" style={{ maxWidth: 1400, marginTop: 80 }}>
+        <main className="w3-container w3-content w3-center" style={{ maxWidth: 1600, marginTop: 80 }}>
             <div className="w3-row">
-                <div className="w3-col w3-margin m7">
-                    <div className="w3-content container-mw">
+                <div className="w3-col m7">
+                    <div className="w3-content w3-margin-top container-mw">
                         <div className="card w3-center w3-round-large">
                             <div className="avatar w3-margin-bottom" style={{
                                 backgroundImage: `url(${userProfile?.coverImage})`
@@ -47,7 +47,7 @@ export default function AuthProfile() {
                                 </div>
                             </div>
 
-                            {user && <div className="w3-margin">
+                            {user && <div className="w3-col w3-margin">
                                 {id + "s" === user._id
                                     ? <Link to={`/auth/${user?._id}/edit-profile`} className="w3-button w3-small w3-theme w3-round-large">
                                         <i className="fa fa-pencil" /> Edit Profile
