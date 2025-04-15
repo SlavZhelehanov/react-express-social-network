@@ -1,8 +1,14 @@
 import { Link } from "react-router";
+import { useUserContext } from "../../../contexts/UserContext";
+import { authUser } from "../../../../userDb";
+import { userProfile } from "../../../../userProfile";
+import Ad from "../../globals/ad/Ad";
 
 export default function AuthAside() {
+    const { user } = useUserContext();
+
     return (
-        <aside className="w3-col m4 w3-margin-top sticky-column">
+        <aside className="w3-col m4 w3-margin sticky-column">            
             <div className="w3-card w3-round-large w3-white w3-padding">
                 <h4 className="w3-center">Suggested Friends</h4>
                 <ul className="w3-ul">
