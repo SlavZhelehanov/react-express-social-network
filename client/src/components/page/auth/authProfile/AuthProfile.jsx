@@ -3,6 +3,7 @@ import { userProfile } from "../../../../../userProfile";
 import { useUserContext } from "../../../../contexts/UserContext";
 import "./authProfile.css";
 import AuthAside from "../AuthAside";
+import Post from "../../middle/post/Post";
 
 export default function AuthProfile() {
     const { user } = useUserContext();
@@ -72,9 +73,7 @@ export default function AuthProfile() {
 
                     <div className="w3-content content-margin-top container-mw">
                         {user?.posts
-                            ? user.posts.map(post => <div key={post._id} className="card w3-center w3-round-large w3-margin-bottom">
-                                <p>{post.content}</p>
-                            </div>)
+                            ? user.posts.map(post => <Post key={post._id} post={post} />)
                             : <div className="w3-round w3-white w3-padding w3-center">
                                 <i className="fa fa-info-circle w3-xxlarge w3-text-theme" />
                                 <p className="w3-large">No posts available yet.</p>

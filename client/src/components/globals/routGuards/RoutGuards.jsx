@@ -4,7 +4,7 @@ import { useUserContext } from "../../../contexts/UserContext";
 export function ProtectedRoute() {
     const { user } = useUserContext();
 
-    return user ? <Outlet /> : <Navigate to="/login" />;
+    return user ? <Outlet /> : <Navigate to="/" />;
 };
 
 export function PublicRoute() {

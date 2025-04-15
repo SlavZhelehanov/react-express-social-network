@@ -4,11 +4,12 @@ import { Link } from "react-router";
 import { timeAgo } from "../../../../utils/timeAge";
 import "./Post.css";
 import Attachements from "./attachements/Attachements";
+import { useUserContext } from "../../../../contexts/UserContext";
 // import LoadingTemplateImage from "../../../globals/loadingTemplateImage/LoadingTemplateImage";
 
 
 export default function Post({ post }) {
-    const isAuthenticated = true;
+    const { user } = useUserContext();
 
     return (
         <div className="w3-container w3-card w3-white w3-round w3-margin">
@@ -36,8 +37,8 @@ export default function Post({ post }) {
 
             {post.images && <Attachements images={post.images} />}
 
-            <div className={`button-container ${!isAuthenticated ? "centered" : ""}`}>
-                {isAuthenticated && <button
+            <div className={`button-container ${!user ? "centered" : ""}`}>
+                {user && <button
                     type="button"
                     className="w3-button w3-theme-d1 w3-margin-bottom"
                 >
@@ -46,7 +47,7 @@ export default function Post({ post }) {
                 <span className="w3-small w3-margin-left w3-margin-right activities-counter">
                     {post.likes?.length || 0} Likes | {post.comments?.length || 0} Comments
                 </span>
-                {isAuthenticated && <Link
+                {user && <Link
                     to={`/posts/${post._id}/details`}
                     type="button"
                     className="w3-button w3-theme-d2 w3-margin-bottom"

@@ -10,19 +10,68 @@ export const authUser = {
     posts: [
         {
             _id: "1",
-            content: "First post!"
+            avatar: "https://robohash.org/administrator",
+            owner: {
+                firstName: "Admin",
+                lastName: "van Buren",
+            },
+            media: {
+                image: "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=600"
+            },
+            content: "Heeeyyy, people!",
+            images: [
+                "https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=600",
+                "https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=600"
+            ],
+            createdAt: "1989-03-29T17:44:53.481Z"
         },
         {
             _id: "2",
-            content: "One more post!"
+            avatar: "https://robohash.org/administrator",
+            owner: {
+                firstName: "Admin",
+                lastName: "van Buren",
+            },
+            media: {
+                image: "https://images.pexels.com/photos/1102912/pexels-photo-1102912.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            content: "Scaryyyy...",
+            images: [
+                
+            ],
+            createdAt: "1999-05-19T17:44:53.481Z"
         },
         {
             _id: "3",
-            content: "If you wander..."
+            avatar: "https://robohash.org/administrator",
+            owner: {
+                firstName: "Admin",
+                lastName: "van Buren",
+            },
+            media: {
+                image: "https://images.pexels.com/photos/1310755/pexels-photo-1310755.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            content: "Tops",
+            images: [
+            ],
+            createdAt: "2012-12-29T17:44:53.481Z"
         },
         {
             _id: "4",
-            content: "Last post"
+            avatar: "https://robohash.org/administrator",
+            owner: {
+                firstName: "Admin",
+                lastName: "van Buren",
+            },
+            media: {
+                image: "https://images.pexels.com/photos/1114896/pexels-photo-1114896.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            content: "The Void",
+            images: [
+                "https://images.pexels.com/photos/573302/pexels-photo-573302.jpeg?auto=compress&cs=tinysrgb&w=600"
+            ],
+            createdAt: "1989-03-29T17:44:53.481Z"
         }
     ],
     createdAt: "2011-06-17T17:42:48.198Z"
