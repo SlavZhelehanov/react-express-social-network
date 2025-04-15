@@ -5,7 +5,7 @@ export default function PageNotFound() {
         <div className="w3-display-container w3-light-grey w3-padding-64" style={{ height: "100vh" }}>
             <div className="w3-display-middle w3-center">
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+                    src="/assets/404.png"
                     alt="Robot confused"
                     style={{ width: "200px", maxWidth: "90%" }}
                     className="w3-animate-top"
