@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
 .profile-stats div {
     margin: 10px 0;
 }
@@ -7,8 +9,6 @@
     height: 150px;
     object-fit: cover;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
 .card {
     background-color: #fff;
@@ -51,3 +51,28 @@
 .container-mw {
     max-width: 900px;
 }
+
+/* Default styles for larger screens */
+/* .w3-col.m7 {
+    width: 58.33333%;
+    margin: 0 auto;
+} */
+/* 
+@media screen and (max-width: 1024px) {
+    .w3-col.m7 {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w3-col.m7 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .w3-col.m7 {
+        padding: 0 10px;
+    }
+} */
