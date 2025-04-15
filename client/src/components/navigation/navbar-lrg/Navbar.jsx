@@ -5,6 +5,7 @@ import { authUser } from "../../../../userDb";
 
 import "./switchButton.css";
 import { useUserContext } from "../../../contexts/UserContext";
+import NavUserDropdown from "./NavUserDropdown";
 
 export default function Navbar() {
     const { user, changeGlobals } = useUserContext();
@@ -80,18 +81,7 @@ export default function Navbar() {
                 </div>
 
                 {user
-                    ? <NavLink
-                        to={`/auth/${user?._id}/profile`}
-                        className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
-                        title="My Account"
-                    >
-                        <img
-                            src={authUser.avatar}
-                            className="w3-circle avatar-img"
-                            style={{ height: 23, width: 23 }}
-                            alt="Avatar"
-                        />
-                    </NavLink>
+                    ? <NavUserDropdown />
                     : <NavLink
                         to="/auth/login"
                         className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
